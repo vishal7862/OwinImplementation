@@ -22,15 +22,3 @@
 
  
    
-
-<script>
-    $(function () {
-
-        if ($(location).attr('href') == "http://10.1.81.226:1043/#Register?err=1") {
-            $("#Error").text("Password Didnt Matched");
-        }
-        if ($(location).attr('href') == "http://10.1.81.226:1043/#Register?err=2") {
-            $("#Error").text("Either Username already exist or Password typed should be of minimum 6 characters");
-        }
-    });
-</script>

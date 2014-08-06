@@ -66,7 +66,7 @@ namespace EmployementApplication.Controllers
                     return View();
                 }
 
-                var user = await userManager.FindAsync(model.Email, model.Password);
+                var user =await userManager.FindAsync(model.Email, model.Password);
 
                 if (user != null)
                 {
@@ -217,7 +217,7 @@ namespace EmployementApplication.Controllers
             }
 
             [HttpGet]
-           
+            [OverRidingAuthorizationAttribute]
             public JsonResult LoadDropDownList()
             {
                 var dept = _departmentsRepository.GetAllDepartments();
